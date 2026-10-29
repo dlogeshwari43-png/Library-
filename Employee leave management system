@@ -1,0 +1,19 @@
+# Employee Leave Management System
+
+employee <- data.frame(
+  ID = c(101, 102, 103),
+  Name = c("Logi", "Priya", "John"),
+  Leave = c("Sick Leave", "Casual Leave", "Emergency Leave"),
+  Days = c(2, 3, 1),
+  Status = c("Approved", "Pending", "Rejected")
+)
+
+cat("EMPLOYEE LEAVE MANAGEMENT SYSTEM\n")
+cat("--------------------------------\n")
+
+print(employee)
+
+cat("\nTotal Leave Requests:", nrow(employee))
+cat("\nApproved:", sum(employee$Status == "Approved"))
+cat("\nPending:", sum(employee$Status == "Pending"))
+cat("\nRejected:", sum(employee$Status == "Rejected"))
